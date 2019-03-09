@@ -163,7 +163,5 @@ int isBSTreeHelper(BSTree t, int min, int max) {
 
 // return 1 if t is a binary search tree, 0 otherwise
 int isBSTree(BSTree t) {
-    return isBSTree(t, INT_MIN, INT_MAX);
+    return isBSTreeHelper(t, INT_MIN, INT_MAX);
 }
-
-
