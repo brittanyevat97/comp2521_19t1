@@ -1,0 +1,10 @@
+myList = [2,3,4]
+
+fold ([2,3,4], mult, 1)
+    = mult (2, fold ([3,4], mult, 1))
+    = mult (2, mult (3, fold ([4], mult, 1)))
+    = mult (2, mult (3, mult (4, fold ([], mult, 1))))
+    = mult (2, mult (3, mult (4, 1)))
+    = mult (2, mult (3, 4))
+    = mult (2, 12)
+    = 24
